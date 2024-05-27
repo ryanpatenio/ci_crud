@@ -132,7 +132,9 @@
             </div>
             <div class="modal-body">
               <form method="POST" id="updateForm" >
-                
+
+                <!-- hidden product ID --> 
+                <input type="hidden" id="product-id" name="product_id">
                 <div class="card-body">
 
                   <div class="row mb-2">
@@ -145,7 +147,7 @@
                     <div class="col">
                       <label for="validationDefault01" class="form-label">Category</label>                  
                       <select name="category" class="form-control" id="category" required>
-                       
+                        <option value="" id="current-category"></option>
                         <?php
                         foreach ($categories as $category) { ?>
                            <option value="<?=$category->category_id; ?>"><?=$category->name; ?></option>
